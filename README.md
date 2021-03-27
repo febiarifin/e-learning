@@ -103,7 +103,7 @@ untuk menampilkan beberapa data gunakan ```limit=[jumlah_data]``` contoh: ```lim
 ```
 {
     "info": "success",
-    "num": 2,
+    "num": 1,
     "result": [
         {
             "nis": "4230",
@@ -115,17 +115,6 @@ untuk menampilkan beberapa data gunakan ```limit=[jumlah_data]``` contoh: ```lim
             "telepon": "081765234908",
             "foto": "profil.png",
             "date_time": "2021-03-27 13:33:13"
-        },
-        {
-            "nis": "4231",
-            "nama": "Nurul",
-            "jeniskelamin": "P",
-            "tempat_lahir": "Wonosobo",
-            "tanggal_lahir": "2003-08-20",
-            "alamat": "Gemblengan",
-            "telepon": "0897653546455",
-            "foto": "profil.png",
-            "date_time": "2021-03-27 13:33:27"
         }
     ]
 }
