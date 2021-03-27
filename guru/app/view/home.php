@@ -3,7 +3,7 @@
     <p class="font-weight-normal">Panel-Guru ->
         <small><?= $nama; ?></small>
         <img src="<?= $url ?>upload/profil/<?= $foto ?>" alt="porfil" width="40" height="40">
-        <a href="?m=logout" class="btn btn-outline-primary">Logout <?php include ICON . 'logout.php'; ?></a>
+        <a href="?m=logout&username=<?= $nama; ?>" class="btn btn-outline-primary">Logout <?php include ICON . 'logout.php'; ?></a>
     </p>
 </div>
 <!-- main -->

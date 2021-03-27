@@ -116,6 +116,13 @@ switch ($modul) {
     case 'hapusMapel':
         include MODEL . 'hapusMapel.php';
         break;
+        // log
+    case 'log':
+        include CONTROL . 'log.php';
+        break;
+    case 'hapusLog':
+        include MODEL . 'hapusLog.php';
+        break;
 
 
     case 'logout':

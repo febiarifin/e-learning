@@ -64,7 +64,7 @@
                     <td><?= $row['tanggal'] ?></td>
                     <td>
                         <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>" class="btn btn-primary btn-sm" target="_blank"><?php include ICON . 'eye.php'; ?></a>
-                        <a href="?m=hapusMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
+                        <a href="?m=hapusMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>&username=<?= $nama ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
                     </td>
                 </tr>
             <?php }

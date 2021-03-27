@@ -13,7 +13,7 @@
             <div class="card-body">
                 <h5 class="card-title"><?= $row['judul'] ?></h5>
                 <p class="card-text"><b>Ringkasan :</b><br><?= $row['ringkasan'] ?></p>
-                <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>" class="btn btn-primary" target="_blank">Lihat Materi <?php include ICON . 'eye.php'; ?></a>
+                <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&username=<?= $nama ?>" class="btn btn-primary" target="_blank">Lihat Materi <?php include ICON . 'eye.php'; ?></a>
             </div>
         </div>
         <br>

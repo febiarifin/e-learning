@@ -1,5 +1,5 @@
 <div>
-    <form action="?m=prosesEditProfil" method="post" enctype="multipart/form-data">
+    <form action="?m=prosesEditProfil&username=<?= $nama ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="nip" value="<?= $nip; ?>">
         <input type="hidden" name="password" value="<?= $password; ?>">
         <div class="form-group col-md-6">

@@ -69,10 +69,10 @@ if (isset($_SESSION['nip'], $_SESSION['password'])) {
 
     <script>
         <?php
-        if (isset($_SESSION['status'])) {
+        if (isset($_SESSION['username'])) {
             echo "
-                swal('Login Berhasil','" . $_SESSION['status'] . "','info');";
-            unset($_SESSION['status']);
+                swal('Login Berhasil','Hallo guru " . base64_decode($_SESSION['username']) . "','info');";
+            unset($_SESSION['username']);
         } elseif (isset($_SESSION['sukses'])) {
             echo "
                 swal('Status','" . $_SESSION['sukses'] . "','success');";

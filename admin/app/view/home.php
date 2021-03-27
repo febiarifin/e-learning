@@ -71,6 +71,9 @@
                         <li class="list-group-item">
                             <a href="?m=manageProfil"><?php include ICON . 'profil.php'; ?> Manage Profil</a>
                         </li>
+                        <li class="list-group-item">
+                            <a href="?m=log"><?php include ICON . 'history.php'; ?> Log Activity</a>
+                        </li>
                     </ul>
                 </div>
             </div>

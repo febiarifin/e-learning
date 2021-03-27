@@ -1,5 +1,5 @@
 <div>
-    <form action="?m=prosesBuatMateri" method="post" enctype="multipart/form-data">
+    <form action="?m=prosesBuatMateri&username=<?= $nama ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="nip" value="<?= $nip; ?>">
         <div class="form-group col-md-6">
             <label for="validationCustom04" class="form-label">Mata Pelajaran</label>

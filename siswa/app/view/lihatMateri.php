@@ -1,6 +1,6 @@
 <?php
 include "config/url.php";
-if ($_GET['id']) {
+if (isset($_GET['id'], $_GET['username'])) {
     $id = base64_decode($_GET['id']);
     $sql = "SELECT * FROM materipelajaran WHERE id=:id";
     $stmt = $con->prepare($sql);
@@ -12,6 +12,19 @@ if ($_GET['id']) {
     $file = $row['file'];
     $judul = $row['judul'];
     $target = $url . "upload/file/" . $file;
+
+    $username = $_GET['username'];
+    $id = uniqid();
+    $akses = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+    $sql_log = "INSERT INTO log(id,akses,user)VALUES(:id,:akses,:user)";
+    $stmt_log = $con->prepare($sql_log);
+    $params = array(
+        ":id" => $id,
+        ":akses" => $akses,
+        ":user" => $username
+    );
+    $stmt_log->execute($params);
 }
 
 ?>
