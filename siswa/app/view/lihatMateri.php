@@ -37,8 +37,8 @@ if (isset($_GET['id'], $_GET['username'])) {
     <title>Lihat Materi <?= $judul ?></title>
 </head>
 
-<body>
-    <object data="<?= $target; ?>" style="height:100%;width:100%;margin:0px"></object>
+<body bgcolor="black">
+    <iframe src="<?= $target ?>" frameborder="0" style="height:100%;width:100%;"></iframe>
 </body>
 
 </html>

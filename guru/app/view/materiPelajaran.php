@@ -56,7 +56,7 @@
         </div>
         <br>
         <div>
-            <a href="?m=manageGuru" class="btn btn-danger"><?php include ICON . 'cancel.php'; ?> Batal</a>
+            <a href="?m=manageMateri" class="btn btn-danger"><?php include ICON . 'cancel.php'; ?> Batal</a>
             <button type="submit" class="btn btn-success"><?php include ICON . 'save.php'; ?> Simpan</button>
         </div>
     </form>

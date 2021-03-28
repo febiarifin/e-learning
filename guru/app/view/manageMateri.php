@@ -39,7 +39,12 @@
             $stmt->execute($params);
             $no = 0;
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $no++;    ?>
+                $no++;
+                $ringkasan = $row['ringkasan'];
+                if (strlen($ringkasan) > 30) {
+                    $ringkasan = substr($ringkasan, 0, 30) . "....";
+                }
+            ?>
                 <tr>
                     <td><?= $no; ?></td>
                     <td><?= $row['idpelajaran'] ?></td>
@@ -58,7 +63,7 @@
                         ?>
                     </td>
                     <td><?= $row['judul'] ?></td>
-                    <td><?= $row['ringkasan'] ?></td>
+                    <td><?= $ringkasan; ?></td>
                     <td><?= $row['kelas'] ?></td>
                     <td><?= $row['file'] ?></td>
                     <td><?= $row['tanggal'] ?></td>
