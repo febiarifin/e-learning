@@ -32,6 +32,12 @@ Setelah file di download, extrak lalu copy-kan file ke folder ```root``` , dan r
 ```
 
 setelah selesai komnfigurasi dan setting, coba jalankan di browser anda ```localhost/e-learning```, sesuaikan dengan nama folder anda.
+untuk login sebagai admin dengan level __admin__ gunakan :
+Username = ```admin```
+Password = ```admin```
+untuk login sebagai admin dengan level __user__ gunakan :
+Username = ```user```
+Password = ```user```
 
 # API
 
