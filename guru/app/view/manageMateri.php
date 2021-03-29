@@ -68,12 +68,32 @@
                     <td><?= $row['file'] ?></td>
                     <td><?= $row['tanggal'] ?></td>
                     <td>
-                        <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>" class="btn btn-primary btn-sm" target="_blank"><?php include ICON . 'eye.php'; ?></a>
-                        <a href="?m=hapusMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>&username=<?= $nama ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
+                        <a href="?m=absen&id=<?= base64_encode($row['id']) ?>" class="btn btn-success btn-sm" target="_blank"><?php include ICON . 'user.php'; ?> Absen Siswa</a>
+                        <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>" class="btn btn-primary btn-sm" target="_blank"><?php include ICON . 'eye.php'; ?>Lihat Materi</a>
+                        <a href="?m=hapusMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>&username=<?= $nama ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?>Hapus</a>
                     </td>
                 </tr>
             <?php }
             ?>
         </tbody>
     </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Perhatian</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+                Yakin ingin menghapus materi ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a href="#" class="btn btn-danger">Hapus</a>
+            </div>
+        </div>
+    </div>
 </div>

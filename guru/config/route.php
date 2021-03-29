@@ -39,6 +39,10 @@ switch ($modul) {
     case 'prosesEditProfil':
         include MODEL . 'prosesEditProfil.php';
         break;
+        // absen
+    case 'absen':
+        include CONTROL . 'absen.php';
+        break;
 
     case 'logout':
         include CONTROL . 'logout.php';

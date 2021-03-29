@@ -22,11 +22,18 @@ if (isset($_GET['id'], $_GET['token'])) {
         );
         $hapus = $stmt->execute($params);
 
+        $sql_absen = "DELETE FROM absen WHERE idmateri=:idmateri";
+        $stmt_absen = $con->prepare($sql_absen);
+        $params_absen = array(
+            ":idmateri" => $id
+        );
+        $hapus_absen = $stmt_absen->execute($params_absen);
+
 
         $hapus_file = unlink($target);
 
 
-        if ($hapus && $hapus_file) {
+        if ($hapus && $hapus_file && $hapus_absen) {
             if (isset($_GET['username'])) {
                 $username = $_GET['username'];
                 $id = uniqid();

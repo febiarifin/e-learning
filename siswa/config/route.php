@@ -21,6 +21,10 @@ switch ($modul) {
     case 'materi':
         include CONTROL . 'materi.php';
         break;
+        // absen
+    case 'absen':
+        include CONTROL . 'absen.php';
+        break;
 
         // manage profil
     case 'manageProfil':

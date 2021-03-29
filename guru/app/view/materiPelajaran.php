@@ -45,12 +45,20 @@
             <select class="form-select form-control" name="kelas" id="validationCustom04" required>
                 <option selected disabled value="">Pilih....</option>
                 <?php
-                $sql_kelas = "SELECT DISTINCT kelas FROM kelas_siswa";
+                $sql_kelas = "SELECT * FROM pelajaran WHERE nip=:nip";
                 $stmt_kelas = $con->prepare($sql_kelas);
-                $stmt_kelas->execute();
-                while ($row_kelas = $stmt_kelas->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <option value="<?= $row_kelas['kelas'] ?>"><?= $row_kelas['kelas'] ?></option>
-                <?php  }
+                $params_kelas = array(":nip" => $nip);
+                $stmt_kelas->execute($params_kelas);
+                while ($row_kelas = $stmt_kelas->fetch(PDO::FETCH_ASSOC)) {
+                    $id_mapel = $row_kelas['id'];
+                    $sql_mapel = "SELECT * FROM kelas_mapel WHERE matapelajaran=:id_mapel";
+                    $stmt_mapel = $con->prepare($sql_mapel);
+                    $params_mapel = array(":id_mapel" => $id_mapel);
+                    $stmt_mapel->execute($params_mapel);
+                    while ($row_mapel = $stmt_mapel->fetch(PDO::FETCH_ASSOC)) { ?>
+                        <option value="<?= $row_mapel['kelas']; ?>"><?= $row_mapel['kelas']; ?></option>
+                <?php    }
+                }
                 ?>
             </select>
         </div>

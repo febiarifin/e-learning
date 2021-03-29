@@ -2,7 +2,7 @@
 session_start();
 include 'config/url.php';
 include 'config/token.php';
-// include 'config/timer.php';
+include 'config/timer.php';
 
 if (!isset($_SESSION['token'])) {
     header('location: ?m=login');
@@ -107,6 +107,13 @@ if (isset($_SESSION['nip'], $_SESSION['password'])) {
                         }, false)
                     })
             })()
+        // modal
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function() {
+            myInput.focus()
+        })
     </script>
 
 </body>

@@ -41,6 +41,18 @@ if (isset($_POST)) {
 
     $simpan_kelas_siswa  = $stmt_kelas_siswa->execute($params_kelas_siswa);
 
+    // update tabel absen
+    $sql_absen = "UPDATE absen SET nis=:nis WHERE nis=:nisLama";
+
+    $stmt_absen  = $con->prepare($sql_absen);
+
+    $params_absen  = array(
+        "nisLama" => $nisLama,
+        ":nis" => $nis
+    );
+
+    $simpan_absen  = $stmt_absen->execute($params_absen);
+
     if ($simpan) {
         $_SESSION['sukses'] = "Siswa sukses diedit.";
         header('location: ?m=manageSiswa');

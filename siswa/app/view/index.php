@@ -2,7 +2,7 @@
 session_start();
 include 'config/url.php';
 include 'config/token.php';
-// include 'config/timer.php';
+include 'config/timer.php';
 
 if (!isset($_SESSION['token'])) {
     header('location: ?m=login');

@@ -9,7 +9,7 @@
     <div class="card-body">
         <table cellpadding="10" cellspacing="10">
             <tr>
-                <td>NIP </td>
+                <td>NIS </td>
                 <td><b><?= $nis ?></b></td>
             </tr>
             <tr>

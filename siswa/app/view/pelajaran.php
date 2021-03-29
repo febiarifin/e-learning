@@ -38,9 +38,9 @@
                     <div class="card text-white bg-dark">
                         <div class="card-header"><?= $row_pelajaran['namapelajaran'] ?></div>
                         <div class="card-body">
-                            <h5 class="card-title">Pengajar : <?= $row_guru['nama'] ?></h5>
+                            <h6 class="card-title">Pengajar : <?= $row_guru['nama'] ?></h6>
                             <br>
-                            <a href="?m=materi&idpelajaran=<?= $row_pelajaran['id'] ?>&kelas=<?= $kelas ?>&mapel=<?= $row_pelajaran['namapelajaran'] ?>&guru=<?= $row_guru['nama'] ?>" class="btn btn-primary">Materi <b><?= $jumlah_materi ?></b></a>
+                            <a href="?m=materi&idpelajaran=<?= $row_pelajaran['id'] ?>&kelas=<?= $kelas ?>&mapel=<?= $row_pelajaran['namapelajaran'] ?>&guru=<?= $row_guru['nama'] ?>" class="btn btn-primary btn-sm">Materi <b><?= $jumlah_materi ?></b></a>
                         </div>
                     </div>
                 </div>
