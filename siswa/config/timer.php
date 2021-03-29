@@ -3,7 +3,7 @@
 $timeout = 1; // Set timeout menit
 $logout_redirect_url = "?m=logout"; // Set logout URL
 
-$timeout = $timeout * 120; // Ubah menit ke detik
+$timeout = $timeout * 1200; // Ubah menit ke detik
 if (isset($_SESSION['start_time'])) {
     $elapsed_time = time() - $_SESSION['start_time'];
     if ($elapsed_time >= $timeout) {
