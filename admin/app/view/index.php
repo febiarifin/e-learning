@@ -21,7 +21,10 @@ if (isset($_SESSION['password'])) {
     $username = $row['username'];
     $foto = $row['foto'];
     $levelAdmin = $row['level'];
+} else {
+    header('location: ?m=login');
 }
+
 if (isset($_SESSION['password_default'])) {
     $password_dafault = base64_decode($_SESSION['password_default']);
 }

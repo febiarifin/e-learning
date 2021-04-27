@@ -124,6 +124,14 @@ switch ($modul) {
         include MODEL . 'hapusLog.php';
         break;
 
+        // faker
+    case 'fakerSiswa':
+        include FAKER . 'siswa.php';
+        break;
+    case 'fakerGuru':
+        include FAKER . 'guru.php';
+        break;
+
 
     case 'logout':
         include CONTROL . 'logout.php';

@@ -26,6 +26,8 @@ if (isset($_SESSION['nip'], $_SESSION['password'])) {
     $alamat = $row['alamat'];
     $telepon = $row['telepon'];
     $foto = $row['foto'];
+} else {
+    header('location: ?m=login');
 }
 
 ?>

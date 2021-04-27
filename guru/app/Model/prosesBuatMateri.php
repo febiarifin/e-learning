@@ -14,12 +14,12 @@ if (isset($_POST)) {
     $tmp_file = $_FILES['file']['tmp_name'];
     $file = uniqid() . $file_name;
 
-    $ekstensi_diperbolehkan = array("pdf", "docx", "pptx");
+    $ekstensi_diperbolehkan = array("pdf", "docx", "pptx", "mp4", "zip", "m4v", "mkv");
     $x = explode(".", $file_name);
     $ekstensi = strtolower(end($x));
 
     if (in_array($ekstensi, $ekstensi_diperbolehkan)) {
-        if ($size_file > 8000000) {
+        if ($size_file > 50000000) {
             $_SESSION['gagal'] = "ukuran file melebihi batas.";
             header('location: ?m=materiPelajaran');
         } else {

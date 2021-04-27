@@ -68,9 +68,9 @@
                     <td><?= $row['file'] ?></td>
                     <td><?= $row['tanggal'] ?></td>
                     <td>
-                        <a href="?m=absen&id=<?= base64_encode($row['id']) ?>" class="btn btn-success btn-sm" target="_blank"><?php include ICON . 'user.php'; ?> Absen Siswa</a>
+                        <a href="?m=absen&id=<?= base64_encode($row['id']) ?>&judul=<?= $row['judul'] ?>" class="btn btn-success btn-sm" target="_blank"><?php include ICON . 'user.php'; ?> Absen Siswa</a>
                         <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>" class="btn btn-primary btn-sm" target="_blank"><?php include ICON . 'eye.php'; ?>Lihat Materi</a>
-                        <a href="?m=hapusMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>&username=<?= $nama ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?>Hapus</a>
+                        <a href="?m=hapusMateri&id=<?= base64_encode($row['id']) ?>&token=<?= get_token(50); ?>&username=<?= $nama ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus ? ')"><?php include ICON . 'delete.php'; ?>Hapus</a>
                     </td>
                 </tr>
             <?php }

@@ -14,7 +14,7 @@
                 <h5 class="card-title"><?= $row['judul'] ?></h5>
                 <p class="card-text"><b>Ringkasan :</b><br><?= $row['ringkasan'] ?></p>
                 <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&username=<?= $nama ?>" class="btn btn-primary btn-sm" target="_blank">Lihat Materi <?php include ICON . 'eye.php'; ?></a>
-                <a href="?m=absen&nis=<?= $nis ?>&username=<?= $nama ?>&id_materi=<?= $row['id'] ?>&kelas=<?= $kelas; ?>" class="btn btn-success btn-sm" target="_blank">Absen <?php include ICON . 'pelajaran.php'; ?></a>
+                <a href="?m=absen&nis=<?= $nis ?>&username=<?= $nama ?>&id_materi=<?= $row['id'] ?>&kelas=<?= $kelas; ?>&guru=<?= $guru; ?>" class="btn btn-success btn-sm" target="_blank">Absen <?php include ICON . 'pelajaran.php'; ?></a>
             </div>
         </div>
         <br>

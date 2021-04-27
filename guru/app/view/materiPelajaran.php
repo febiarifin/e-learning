@@ -37,7 +37,7 @@
             <label for="validationCustom03" class="form-label">FIle Materi</label>
             <input type="file" name="file" class="form-control" id="validationCustom03" required>
             <div>
-                <p><small>Format file : <b>pdf, docx, pptx, zip. Maksimal file 8 Mb</b></small></p>
+                <p><small>Format file : <b>pdf, docx, pptx, zip, mp4, m4v, mkv. Maksimal file 50 Mb</b></small></p>
             </div>
         </div>
         <div class="form-group col-md-6">
