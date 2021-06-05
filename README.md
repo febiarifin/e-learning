@@ -127,7 +127,7 @@ untuk menampilkan beberapa data gunakan ```limit=[jumlah_data]``` contoh: ```lim
 ```
 Untuk Get data Siswa dan Guru, kita bisa menggunakan filter : 
 ```
-nis = [nis] \\untuk menampilkan nama berdasarkan NIS/NIP contoh 
+nis = [nis] \\untuk menampilkan nama berdasarkan NIS/NIP 
 nama = [nama] \\untuk menampilkan nama berdasarkan nama 
 jk = [jk] \\untuk menampilkan nama berdasarkan jenis kelamin P/L
 alamat = [alamat] \\untuk menampilkan nama berdasarkan alamat
@@ -142,7 +142,7 @@ Contoh penggunaan untuk ```GET``` data Siswa :
 ```http://localhost/e-learning/?m=siswa&lahir=[lahir]```
 
 Contoh penggunaan untuk ```GET``` data Guru :
-```http://localhost/e-learning/?m=guru&nis=[nis]```
+```http://localhost/e-learning/?m=guru&nip=[nip]```
 ```http://localhost/e-learning/?m=guru&nama=[nama]```
 ```http://localhost/e-learning/?m=guru&jk=[jk]```
 ```http://localhost/e-learning/?m=guru&alamat=[alamat]```
