@@ -6,7 +6,7 @@
         <thead>
             <tr>
                 <th>NO</th>
-                <th>ID Pelajaran</th>
+                <!-- <th>ID Pelajaran</th> -->
                 <th>Mata Pelajaran</th>
                 <th>Judul</th>
                 <th>Ringkasan</th>
@@ -19,7 +19,7 @@
         <tfoot>
             <tr>
                 <th>NO</th>
-                <th>ID Pelajaran</th>
+                <!-- <th>ID Pelajaran</th> -->
                 <th>Mata Pelajaran</th>
                 <th>Judul</th>
                 <th>Ringkasan</th>
@@ -47,7 +47,7 @@
             ?>
                 <tr>
                     <td><?= $no; ?></td>
-                    <td><?= $row['idpelajaran'] ?></td>
+                    <!-- <td><?= $row['idpelajaran'] ?></td> -->
                     <td>
                         <?php
                         $sql_pelajaran = "SELECT * FROM pelajaran WHERE id=:id";
@@ -61,7 +61,7 @@
                             echo $row_pelajaran['namapelajaran'];
                         }
                         ?>
-                    </td>
+                    </td> 
                     <td><?= $row['judul'] ?></td>
                     <td><?= $ringkasan; ?></td>
                     <td><?= $row['kelas'] ?></td>

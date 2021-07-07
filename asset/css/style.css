@@ -62,7 +62,7 @@ body{
 }
 @media(min-width:1200px){
     .header img{
-        margin-right: 70%;
+        margin-right: 60%;
     }
 }
 @media(max-width:1200px){

@@ -40,7 +40,7 @@
                         <div class="card-body">
                             <h6 class="card-title">Pengajar : <?= $row_guru['nama'] ?></h6>
                             <br>
-                            <a href="?m=materi&idpelajaran=<?= $row_pelajaran['id'] ?>&kelas=<?= $kelas ?>&mapel=<?= $row_pelajaran['namapelajaran'] ?>&guru=<?= $row_guru['nama'] ?>" class="btn btn-primary btn-sm">Materi <b><?= $jumlah_materi ?></b></a>
+                            <a href="?m=materi&idpelajaran=<?= $row_pelajaran['id'] ?>&kelas=<?= $kelas ?>&mapel=<?= $row_pelajaran['namapelajaran'] ?>&guru=<?= $row_guru['nama'] ?>" class="btn btn-primary btn-sm"><b><?= $jumlah_materi ?></b> Materi</a>
                         </div>
                     </div>
                 </div>

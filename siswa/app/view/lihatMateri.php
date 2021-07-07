@@ -1,5 +1,6 @@
 <?php
-include "config/url.php";
+// include "config/url.php";
+$url="/";
 if (isset($_GET['id'], $_GET['username'])) {
     $id = base64_decode($_GET['id']);
     $sql = "SELECT * FROM materipelajaran WHERE id=:id";
