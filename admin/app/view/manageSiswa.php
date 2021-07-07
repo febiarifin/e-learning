@@ -5,6 +5,7 @@
     <table class="table table-bordered" id="dataTable" cellspacing="0">
         <thead>
             <tr>
+                <th>NO</th>
                 <th>NIS</th>
                 <th>Nama</th>
                 <th>JK</th>
@@ -18,6 +19,7 @@
         </thead>
         <tfoot>
             <tr>
+                <th>NO</th>
                 <th>NIS</th>
                 <th>Nama</th>
                 <th>JK</th>
@@ -34,8 +36,10 @@
             $sql = "SELECT * FROM siswa";
             $stmt = $con->prepare($sql);
             $stmt->execute();
+            $no = 1;
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <tr>
+                    <td><?= $no++; ?></td>
                     <td><?= $row['nis'] ?></td>
                     <td><?= $row['nama'] ?></td>
                     <td><?= $row['jeniskelamin'] ?></td>

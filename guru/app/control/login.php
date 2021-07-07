@@ -1,3 +1,3 @@
 <?php
-$title = "Login-Admin";
+$title = "Login-Guru";
 include VIEW . 'login.php';

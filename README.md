@@ -1,10 +1,20 @@
-# e-learning
+# e-learning app
 
-# Konfigurasi
+## Fitur 
+- [x] Authentifikasi dengan token.
+- [x] Faker generator untuk insert data Guru dan Siswa.
+- [x] Share file maks 50 Mb.
+- [x] Read file.
+- [x] Absensi.
+- [x] CRUD materi, kelas, siswa, guru, ruang kelas, mata pelajaran => untuk role ```admin```
+- [ ] Diskusi *next*
+- [ ] Chat *next*
+
+## Konfigurasi
 
 Konfigurasi pada file ```conn.php``` didalam folder ```config/``` :
 
-```
+```php
 $server = "localhost";
 $username = "root";
 $password = "";
@@ -13,7 +23,7 @@ $database = "e-learning";
 
 Konfigurasi pada file ```settings.ini.php``` didalam folder ```api/db``` :
 
-```
+```php
 host = localhost
 user = root
 password =
@@ -22,16 +32,12 @@ dbname = e-learning
 
 >Sesuaikan dengan configurasi web server anda.
 
-# Setting
+## Running
 
-Setelah file di download, extrak lalu copy-kan file ke folder ```root``` , dan rename folder hasil extrak menjadi ```e-learning``` , atau jika ingin dirubah misal menjadi ```App-E-learning```, jangan lupa untuk mengubah file ```url.php``` di semua folder ```config/``` baik didalam folder ```admin/```,```guru/```,```siswa/``` seperti berikut ini :
-```
-<?php 
-  $url = "../../e-learning/"; //sesuaikan nama folder anda misal : App-E-learning
-?>
-```
+Jalankan __CMD / Git Bash__, lalu masuk ke direktori folder ```e-learning/``` , dan ketikkan perintah ```php -S localhost:3000```, kemudian buka __Browser__ kalian dan tulis alamat ```localhost:3000```.
 
-setelah selesai komnfigurasi dan setting, coba jalankan di browser anda ```localhost/e-learning```, sesuaikan dengan nama folder anda.
+Atau jalankan manual seperti biasa ```localhost/e-learning```, tetapi file sudah disimpan di ```xampp/htdocs/```.
+
 * untuk login sebagai admin dengan level __admin__ gunakan :
 Username = ```admin```
 Password = ```admin```
@@ -39,7 +45,7 @@ Password = ```admin```
 Username = ```user```
 Password = ```user```
 
-# API
+## API
 
 file API ada di folder ```api/list/```, untuk url __GET__ :
 * ```http://localhost/e-learning/?m=siswa``` untuk GET data siswa
@@ -51,7 +57,7 @@ file API ada di folder ```api/list/```, untuk url __GET__ :
 * ```http://localhost/e-learning/?m=materipelajaran``` untuk GET data materi pelajaran
 
 untuk hasilnya, akan menampilkan semua data yang ada di tabel dalam bentuk JSON seperti berikut :
-```
+```json
 {
     "info": "success",
     "num": 4,
@@ -106,7 +112,7 @@ untuk hasilnya, akan menampilkan semua data yang ada di tabel dalam bentuk JSON 
 
 untuk menampilkan beberapa data gunakan ```limit=[jumlah_data]``` contoh: ```limit=1``` , caranya seperti ini : 
 ```http://localhost/e-learning/?m=siswa&limit=1``` ,maka akan menampilkan 1 dari semua data siswa.
-```
+```json
 {
     "info": "success",
     "num": 1,
@@ -127,11 +133,11 @@ untuk menampilkan beberapa data gunakan ```limit=[jumlah_data]``` contoh: ```lim
 ```
 Untuk Get data Siswa dan Guru, kita bisa menggunakan filter : 
 ```
-nis = [nis] \\untuk menampilkan nama berdasarkan NIS/NIP 
-nama = [nama] \\untuk menampilkan nama berdasarkan nama 
-jk = [jk] \\untuk menampilkan nama berdasarkan jenis kelamin P/L
-alamat = [alamat] \\untuk menampilkan nama berdasarkan alamat
-lahir = [lahir] \\untuk menampilkan nama berdasarkan temapat lahir
+nis = [nis] / nip = [nip] => untuk menampilkan nama berdasarkan NIS/NIP 
+nama = [nama] => untuk menampilkan nama berdasarkan nama 
+jk = [jk] => untuk menampilkan nama berdasarkan jenis kelamin P/L
+alamat = [alamat] => untuk menampilkan nama berdasarkan alamat
+lahir = [lahir] => untuk menampilkan nama berdasarkan temapat lahir
 ```
 
 Contoh penggunaan untuk ```GET``` data Siswa :
@@ -148,6 +154,11 @@ Contoh penggunaan untuk ```GET``` data Guru :
 ```http://localhost/e-learning/?m=guru&alamat=[alamat]```
 ```http://localhost/e-learning/?m=guru&lahir=[lahir]```
 
-Jika ingin bertanya lebih lanjut bisa WhatsApp ke ```+62 888-668-887-32``` atau email ke ```febiarifin0@gmail.com```.
+## Tools
+- bootstrap 4.6.0 https://getbootstrap.com/docs/4.6/getting-started/download/
+- Faker generator by https://github.com/fzaninotto/Faker
+
+## Notulensi
+Jika ingin bertanya lebih lanjut bisa WhatsApp ke __+62 888-668-887-32__ atau email ke __febiarifin0@gmail.com__ .
 
 ~terima kasih
