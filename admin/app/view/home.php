@@ -32,42 +32,27 @@
                         <li class="list-group-item">
                             <a href="?m=manageSiswa"><?php include ICON . 'user_many.php'; ?> Manage Siswa</a>
                         </li>
+                        
                         <li class="list-group-item">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="kelas" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <?php include ICON . 'door.php'; ?> Manage Kelas
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="kelas">
-                                    <li class="list-group-item">
-                                        <a href="?m=manageKelas"> <?php include ICON . 'add.php'; ?> Tambah Kelas</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="?m=buatKelas"> <?php include ICON . 'add.php'; ?> Buat Kelas Siswa</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="?m=daftarKelas"> <?php include ICON . 'pelajaran.php'; ?> Daftar Kelas Siswa</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <a href="?m=manageKelas"> <?php include ICON . 'add.php'; ?> Tambah Kelas</a>
                         </li>
                         <li class="list-group-item">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="pelajaran" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <?php include ICON . 'pelajaran.php'; ?> Manage Pelajaran
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="pelajaran">
-                                    <li class="list-group-item">
-                                        <a href="?m=managePelajaran"><?php include ICON . 'add.php'; ?> Tambah Pelajaran</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="?m=buatMapel"><?php include ICON . 'add.php'; ?> Buat Mapel Kelas</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="?m=daftarMapel"><?php include ICON . 'pelajaran.php'; ?> Daftar Mapel Kelas</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <a href="?m=buatKelas"> <?php include ICON . 'add.php'; ?> Buat Kelas Siswa</a>
                         </li>
+                        <li class="list-group-item">
+                            <a href="?m=daftarKelas"> <?php include ICON . 'pelajaran.php'; ?> Daftar Kelas Siswa</a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="?m=managePelajaran"><?php include ICON . 'add.php'; ?> Tambah Pelajaran</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="?m=buatMapel"><?php include ICON . 'add.php'; ?> Buat Mapel Kelas</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="?m=daftarMapel"><?php include ICON . 'pelajaran.php'; ?> Daftar Mapel Kelas</a>
+                        </li>
+
                         <li class="list-group-item">
                             <a href="?m=manageProfil"><?php include ICON . 'profil.php'; ?> Manage Profil</a>
                         </li>

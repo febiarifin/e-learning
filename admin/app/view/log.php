@@ -1,4 +1,4 @@
-<a href="#" data-bs-toggle="modal" data-bs-target="#hapus" class="btn btn-danger"><?php include ICON . 'delete.php'; ?> Hapus Semua Log</a>
+<a href="#" data-toggle="modal" data-target="#hapus" class="btn btn-danger"><?php include ICON . 'delete.php'; ?> Hapus Semua Log</a>
 <br>
 <!-- tabel kelas -->
 <hr>
@@ -51,13 +51,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Perhatian</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                <!-- <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button> -->
             </div>
             <div class="modal-body">
                 Yakin ingin menghapus semua log activity ?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 <a href="?m=hapusLog" class="btn btn-danger">Hapus</a>
             </div>
         </div>

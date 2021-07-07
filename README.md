@@ -12,6 +12,8 @@
 
 ## Konfigurasi
 
+Buat database dulu di ```phpMyAdmin``` dengan nama ```e-learning```, kemudian import database ```e-learning.sql```
+
 Konfigurasi pada file ```conn.php``` didalam folder ```config/``` :
 
 ```php
@@ -44,6 +46,12 @@ Password = ```admin```
 * untuk login sebagai admin dengan level __user__ gunakan :
 Username = ```user```
 Password = ```user```
+* untuk login sebagai guru :
+NIP = ```013933```
+Password = ```61```
+* untuk login sebagai Siswa :
+NIP = ```0273```
+Password = ```79```
 
 ## API
 
