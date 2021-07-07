@@ -50,7 +50,7 @@ Password = ```user```
 NIP = ```013933```
 Password = ```61```
 * untuk login sebagai Siswa :
-NIP = ```0273```
+NIS = ```0273```
 Password = ```79```
 
 ## API
