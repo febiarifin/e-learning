@@ -43,6 +43,10 @@ switch ($modul) {
     case 'absen':
         include CONTROL . 'absen.php';
         break;
+        // Diskusi
+    case 'diskusi':
+        include CONTROL.'diskusi.php';
+        break;
 
     case 'logout':
         include CONTROL . 'logout.php';

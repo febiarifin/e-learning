@@ -1,21 +1,4 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absensi Siswa</title>
-</head>
-
-<body>
-    <?php
-    // session_start();
-    $nis = $_GET['nis'];
-    $nama = $_GET['username'];
-    $id_materi = $_GET['id_materi'];
-    $kelas_siswa = $_GET['kelas'];
-    $guru = $_GET['guru'];
-
+<?php
     // ambil data materi pelajaran
     $sql_materi = "SELECT * FROM materipelajaran WHERE id=:idmateri";
     $stmt_materi = $con->prepare($sql_materi);
@@ -25,7 +8,6 @@
     $stmt_materi->execute($params_materi);
     $data_materi = $stmt_materi->fetch(PDO::FETCH_ASSOC);
     $judul = $data_materi['judul'];
-
     // cek apakah sudah absen atau belum
     $sql_absen = "SELECT * FROM absen WHERE nis=:nis AND idmateri=:idmateri";
     $stmt_absen = $con->prepare($sql_absen);
@@ -39,12 +21,10 @@
     $cek = $stmt_absen->fetch(PDO::FETCH_ASSOC);
     $cek_nis = $cek['nis'];
     if ($cek_nis > 0) {
-        // $_SESSION['status'] = "Sudah Absen";
-        // $_SESSION['id'] = $id_materi;
-        // header('location: ?m=lihatAbsen');
     ?>
+    <a href="?m=materi&idpelajaran=<?= $id; ?>&kelas=<?= $kelas; ?>&guru=<?= $guru; ?>&mapel=<?= $mapel; ?>" class="btn btn-danger btn-sm mb-3"><?php include ICON.'left.php'; ?> ke materi</a>
         <center>
-            <h3 style="color: red;"><?= "Sudah absen"; ?></h3>
+            <h3><?= "Sudah absen"; ?></h3>
             <table>
                 <tr>
                     <td>Kelas</td>
@@ -105,7 +85,7 @@
         if ($absen) {
         ?>
             <center>
-                <h3 style="color: green;"><?= "Absen berhasil"; ?></h3>
+                <h3><?= "Absen berhasil"; ?></h3>
                 <table>
                     <tr>
                         <td>Kelas</td>
@@ -157,6 +137,3 @@
         <?php
     }
         ?>
-</body>
-
-</html>

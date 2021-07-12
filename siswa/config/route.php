@@ -25,6 +25,14 @@ switch ($modul) {
     case 'absen':
         include CONTROL . 'absen.php';
         break;
+        // Diskusi
+    case 'diskusi':
+        include CONTROL.'diskusi.php';
+        break;
+        // Kirim diskusi
+    case 'kirimDiskusi':
+        include MODEL.'kirimDiskusi.php';
+        break;
 
         // manage profil
     case 'manageProfil':

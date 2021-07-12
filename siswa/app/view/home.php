@@ -2,7 +2,7 @@
 <div class="header">
     <p class="font-weight-normal">Panel-Siswa ->
         <small><?= $nama; ?></small>
-        <img src="<?= $url ?>upload/profil/<?= $foto ?>" alt="porfil" width="40" height="40">
+        <img src="<?= $url ?>upload/profil/<?= $foto ?>" alt="profil" width="40" height="40">
         <a href="?m=logout&username=<?= $nama ?>" class="btn btn-outline-primary">Logout <?php include ICON . 'logout.php'; ?></a>
     </p>
 </div>

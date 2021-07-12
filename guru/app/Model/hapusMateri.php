@@ -32,8 +32,14 @@ if (isset($_GET['id'], $_GET['token'])) {
 
         $hapus_file = unlink($target);
 
+        $sql_diskusi = "DELETE FROM diskusi WHERE idmateri=:idmateri";
+        $stmt_diskusi = $con->prepare($sql_diskusi);
+        $params_diskusi = array(
+            ":idmateri" => $id
+        );
+        $hapus_diskusi = $stmt_diskusi->execute($params_diskusi);
 
-        if ($hapus && $hapus_file && $hapus_absen) {
+        if ($hapus && $hapus_file && $hapus_absen && $hapus_diskusi) {
             if (isset($_GET['username'])) {
                 $username = $_GET['username'];
                 $id = uniqid();

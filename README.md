@@ -7,8 +7,8 @@
 - [x] Read file.
 - [x] Absensi.
 - [x] CRUD materi, kelas, siswa, guru, ruang kelas, mata pelajaran => untuk role ```admin```
-- [ ] Diskusi *next*
-- [ ] Chat *next*
+- [x] Diskusi 
+- [ ] Chat admin *next*
 
 ## Konfigurasi
 
@@ -165,6 +165,7 @@ Contoh penggunaan untuk ```GET``` data Guru :
 ## Tools
 - bootstrap 4.6.0 https://getbootstrap.com/docs/4.6/getting-started/download/
 - Faker generator by https://github.com/fzaninotto/Faker
+- Sweetalert by https://github.com/t4t5/sweetalert
 
 ## Notulensi
 Jika ingin bertanya lebih lanjut bisa WhatsApp ke __+62 888-668-887-32__ atau email ke __febiarifin0@gmail.com__ .
