@@ -7,7 +7,13 @@
         ":kelas" => $kelas
     );
     $stmt->execute($params);
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
+        $id_materi=$row['id'];
+        $data = "SELECT COUNT(*) FROM diskusi WHERE idmateri='$id_materi' ";
+        $stmt_data = $con->prepare($data);
+        $stmt_data->execute();
+        $jumlah_data = $stmt_data->fetchColumn();
+        ?>
         <div class="card text-dark bg-light md-12">
             <div class="card-header">Pengajar : <?= $guru ?></div>
             <div class="card-body">
@@ -17,7 +23,7 @@
             <div class="card-footer">
                 <a href="?m=lihatMateri&id=<?= base64_encode($row['id']) ?>&username=<?= $nama ?>" class="btn btn-primary btn-sm" target="_blank">Lihat Materi <?php include ICON . 'eye.php'; ?></a>
                 <a href="?m=absen&nis=<?= $nis ?>&username=<?= $nama ?>&id_materi=<?= $row['id'] ?>&kelas=<?= $kelas; ?>&guru=<?= $guru; ?>" class="btn btn-success btn-sm" target="_blank">Absen <?php include ICON . 'pelajaran.php'; ?></a>
-                <a href="?m=diskusi&nis=<?= $nis ?>&username=<?= $nama ?>&id_materi=<?= $row['id'] ?>&judul=<?= $row['judul']; ?>&idpelajaran=<?= $id; ?>&kelas=<?= $kelas; ?>&guru=<?= $guru; ?>&mapel=<?= $mapel; ?>" class="btn btn-warning btn-sm">Diskusi <?php include ICON . 'diskusi.php'; ?></a>
+                <a href="?m=diskusi&nis=<?= $nis ?>&username=<?= $nama ?>&id_materi=<?= $row['id'] ?>&judul=<?= $row['judul']; ?>&idpelajaran=<?= $id; ?>&kelas=<?= $kelas; ?>&guru=<?= $guru; ?>&mapel=<?= $mapel; ?>" class="btn btn-warning btn-sm"><b><?= $jumlah_data ?></b> Diskusi <?php include ICON . 'diskusi.php'; ?></a>
             </div>
         </div>
         <br>

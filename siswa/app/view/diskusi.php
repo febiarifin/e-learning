@@ -35,24 +35,25 @@
             </div>
         </div>
     </form>
-    <br>
-    <h5>Diskusi</h5>
-    <hr>
-    <div>
     <?php
         $batas = 5;
         $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-        $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
+        $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;    
 
         $previous = $halaman - 1;
         $next = $halaman + 1;
         
-        $data = "SELECT COUNT(*) FROM diskusi";
+        $data = "SELECT COUNT(*) FROM diskusi WHERE idmateri='$id_materi'";
         $stmt_data = $con->prepare($data);
         $stmt_data->execute();
         $jumlah_data = $stmt_data->fetchColumn();
         $total_halaman = ceil($jumlah_data / $batas);
-
+    ?>
+    <br>
+    <h5>Diskusi : <?= $jumlah_data ?></h5>
+    <hr>
+    <div>
+    <?php
         $sql = "SELECT * FROM diskusi WHERE idmateri=:id ORDER BY date_time DESC LIMIT $halaman_awal, $batas";
         $stmt = $con->prepare($sql);
         $params = array(

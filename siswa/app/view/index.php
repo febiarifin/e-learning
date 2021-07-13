@@ -1,7 +1,5 @@
 <?php
 session_start();
-// include 'config/url.php';
-$url ="/";
 include 'config/token.php';
 include 'config/timer.php';
 

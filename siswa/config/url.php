@@ -1,1 +1,1 @@
-<?php $url = "../../e-learning/";
+<?php $url = "../";

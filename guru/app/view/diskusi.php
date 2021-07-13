@@ -1,21 +1,23 @@
+<?php 
+    $batas = 5;
+    $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+    $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;    
+
+    $previous = $halaman - 1;
+    $next = $halaman + 1;
+    
+    $data = "SELECT COUNT(*) FROM diskusi WHERE idmateri='$id_materi' ";
+    $stmt_data = $con->prepare($data);
+    $stmt_data->execute();
+    $jumlah_data = $stmt_data->fetchColumn();
+    $total_halaman = ceil($jumlah_data / $batas);
+?>
 <div>
     <a href="?m=manageMateri" class="btn btn-danger btn-sm mb-3"><?php include ICON.'left.php'; ?>Kembali</a>
+    <h5>Dikusi : <?= $jumlah_data ?></h5>
     <hr>
     <div>
     <?php
-        $batas = 5;
-        $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-        $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
-
-        $previous = $halaman - 1;
-        $next = $halaman + 1;
-        
-        $data = "SELECT COUNT(*) FROM diskusi";
-        $stmt_data = $con->prepare($data);
-        $stmt_data->execute();
-        $jumlah_data = $stmt_data->fetchColumn();
-        $total_halaman = ceil($jumlah_data / $batas);
-
         $sql = "SELECT * FROM diskusi WHERE idmateri=:id ORDER BY date_time DESC LIMIT $halaman_awal, $batas";
         $stmt = $con->prepare($sql);
         $params = array(
