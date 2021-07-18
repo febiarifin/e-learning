@@ -1,6 +1,3 @@
-<?php 
-    $url ="/";
-?>
 <html lang="en">
 
 <head>
