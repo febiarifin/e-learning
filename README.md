@@ -38,8 +38,6 @@ dbname = e-learning
 
 Jalankan __CMD / Git Bash__, lalu masuk ke direktori folder ```e-learning/``` , dan ketikkan perintah ```php -S localhost:3000```, kemudian buka __Browser__ kalian dan tulis alamat ```localhost:3000```.
 
-Atau jalankan manual seperti biasa ```localhost/e-learning```, tetapi file sudah disimpan di ```xampp/htdocs/```.
-
 * untuk login sebagai admin dengan level __admin__ gunakan :
 Username = ```admin```
 Password = ```admin```
