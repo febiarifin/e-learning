@@ -23,15 +23,6 @@ $password = "";
 $database = "e-learning";
 ```
 
-Konfigurasi pada file ```settings.ini.php``` didalam folder ```api/db``` :
-
-```php
-host = localhost
-user = root
-password =
-dbname = e-learning
-```
-
 >Sesuaikan dengan configurasi web server anda.
 
 ## Running
