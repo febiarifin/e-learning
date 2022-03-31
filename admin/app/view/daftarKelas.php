@@ -1,5 +1,7 @@
 <br>
 <div class="container-dashboard">
+    <a href="?m=buatKelas" class="btn btn-primary mb-3"><?php include ICON . 'add.php'; ?>
+        Buat Kelas Siswa</a>
     <table class="table table-bordered" id="dataTable" cellspacing="0">
         <thead>
             <tr>
@@ -27,12 +29,12 @@
             $no = 0;
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $no++;    ?>
-                <tr>
-                    <td><?= $no; ?></td>
-                    <td><?= $row['kelas'] ?></td>
-                    <td><?= $row['nip'] ?></td>
-                    <td>
-                        <?php
+            <tr>
+                <td><?= $no; ?></td>
+                <td><?= $row['kelas'] ?></td>
+                <td><?= $row['nip'] ?></td>
+                <td>
+                    <?php
                         $sql_siswa = "SELECT * FROM kelas_siswa WHERE kelas=:kelas";
                         $stmt_siswa = $con->prepare($sql_siswa);
                         $kelas = $row['kelas'];
@@ -46,11 +48,12 @@
                             echo "<b>[" . $jumlah . "]</b>" . $row_siswa['nis'];
                         }
                         ?>
-                    </td>
-                    <td>
-                        <a href="?m=hapusKelasSiswa&kelas=<?= base64_encode($row['kelas']) ?>&token=<?= get_token(50); ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
-                    </td>
-                </tr>
+                </td>
+                <td>
+                    <a href="?m=hapusKelasSiswa&kelas=<?= base64_encode($row['kelas']) ?>&token=<?= get_token(50); ?>"
+                        class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
+                </td>
+            </tr>
             <?php }
             ?>
         </tbody>

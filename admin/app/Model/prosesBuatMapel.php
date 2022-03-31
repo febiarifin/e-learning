@@ -4,7 +4,7 @@ if (isset($_POST)) {
     $jumlah_post = $_POST['jumlah_post'];
 
     for ($x = 0; $x < $jumlah_post; $x++) {
-        $kelas = $_POST['kelas' . $x];
+        $kelas = $_POST['kelas'];
         $matapelajaran = $_POST['matapelajaran' . $x];
 
         $sql = "INSERT INTO kelas_mapel(kelas,matapelajaran) VALUES('$kelas','$matapelajaran')";

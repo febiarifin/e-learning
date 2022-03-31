@@ -3,7 +3,8 @@
     <p class="font-weight-normal">Panel-Admin ->
         <small><?= $username; ?></small>
         <img src="<?= $url ?>upload/profil/<?= $foto ?>" alt="porfil" width="40" height="40">
-        <a href="?m=logout" class="btn btn-outline-primary" onclick="return confirm('Yakin ingin logout ?');">Logout <?php include ICON . 'logout.php'; ?></a>
+        <a href="?m=logout" class="btn btn-outline-primary button-logout"
+            onclick="return confirm('Yakin ingin logout ?');">Logout <?php include ICON . 'logout.php'; ?></a>
     </p>
 </div>
 <!-- main -->
@@ -21,9 +22,9 @@
                         </li>
                         <?php
                         if ($levelAdmin == "admin") { ?>
-                            <li class="list-group-item">
-                                <a href="?m=manageAdmin"><?php include ICON . 'user_plus.php'; ?> Manage Admin</a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="?m=manageAdmin"><?php include ICON . 'user_plus.php'; ?> Manage Admin</a>
+                        </li>
                         <?php }
                         ?>
                         <li class="list-group-item">
@@ -32,7 +33,7 @@
                         <li class="list-group-item">
                             <a href="?m=manageSiswa"><?php include ICON . 'user_many.php'; ?> Manage Siswa</a>
                         </li>
-                        
+
                         <li class="list-group-item">
                             <a href="?m=manageKelas"> <?php include ICON . 'add.php'; ?> Tambah Kelas</a>
                         </li>
@@ -42,7 +43,7 @@
                         <li class="list-group-item">
                             <a href="?m=daftarKelas"> <?php include ICON . 'pelajaran.php'; ?> Daftar Kelas Siswa</a>
                         </li>
-                        
+
                         <li class="list-group-item">
                             <a href="?m=managePelajaran"><?php include ICON . 'add.php'; ?> Tambah Pelajaran</a>
                         </li>

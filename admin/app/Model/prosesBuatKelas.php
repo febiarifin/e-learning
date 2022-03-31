@@ -4,8 +4,8 @@ if (isset($_POST)) {
     $jumlah_post = $_POST['jumlah_post'];
 
     for ($x = 0; $x < $jumlah_post; $x++) {
-        $kelas = $_POST['kelas' . $x];
-        $nip = $_POST['nip' . $x];
+        $kelas = $_POST['kelas'];
+        $nip = $_POST['nip'];
         $nis = $_POST['nis' . $x];
 
         $sql = "INSERT INTO kelas_siswa(kelas,nip,nis) VALUES('$kelas','$nip','$nis')";

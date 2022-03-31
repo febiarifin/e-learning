@@ -1,5 +1,6 @@
 <br>
 <div class="container-dashboard">
+    <a href="?m=buatMapel" class="btn btn-primary mb-3"><?php include ICON . 'add.php'; ?>Buat Mapel Kelas</a>
     <table class="table table-bordered" id="dataTable" cellspacing="0">
         <thead>
             <tr>
@@ -25,11 +26,11 @@
             $no = 0;
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $no++;    ?>
-                <tr>
-                    <td><?= $no; ?></td>
-                    <td><?= $row['kelas'] ?></td>
-                    <td>
-                        <?php
+            <tr>
+                <td><?= $no; ?></td>
+                <td><?= $row['kelas'] ?></td>
+                <td>
+                    <?php
                         $sql_mapel = "SELECT * FROM kelas_mapel WHERE kelas=:kelas";
                         $stmt_mapel = $con->prepare($sql_mapel);
                         $kelas = $row['kelas'];
@@ -52,11 +53,12 @@
                             }
                         }
                         ?>
-                    </td>
-                    <td>
-                        <a href="?m=hapusMapel&kelas=<?= base64_encode($row['kelas']) ?>&token=<?= get_token(50); ?>" class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
-                    </td>
-                </tr>
+                </td>
+                <td>
+                    <a href="?m=hapusMapel&kelas=<?= base64_encode($row['kelas']) ?>&token=<?= get_token(50); ?>"
+                        class="btn btn-danger btn-sm"><?php include ICON . 'delete.php'; ?></a>
+                </td>
+            </tr>
             <?php }
             ?>
         </tbody>

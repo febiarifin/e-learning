@@ -3,7 +3,8 @@
     <p class="font-weight-normal">Panel-Guru ->
         <small><?= $nama; ?></small>
         <img src="<?= $url ?>upload/profil/<?= $foto ?>" alt="porfil" width="40" height="40">
-        <a href="?m=logout&username=<?= $nama; ?>" class="btn btn-outline-primary">Logout <?php include ICON . 'logout.php'; ?></a>
+        <a href="?m=logout&username=<?= $nama; ?>" class="btn btn-outline-primary button-logout">Logout
+            <?php include ICON . 'logout.php'; ?></a>
     </p>
 </div>
 <!-- main -->
@@ -20,10 +21,12 @@
                             <a href="?m=home"><?php include ICON . 'home.php'; ?> Home</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="?m=materiPelajaran"><?php include ICON . 'pelajaran.php'; ?> Buat Materi Pelajaran</a>
+                            <a href="?m=materiPelajaran"><?php include ICON . 'pelajaran.php'; ?> Buat Materi
+                                Pelajaran</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="?m=manageMateri"><?php include ICON . 'pelajaran.php'; ?> Manage Materi Pelajaran</a>
+                            <a href="?m=manageMateri"><?php include ICON . 'pelajaran.php'; ?> Manage Materi
+                                Pelajaran</a>
                         </li>
                         <li class="list-group-item">
                             <a href="?m=manageProfil"><?php include ICON . 'profil.php'; ?> Manage Profil</a>
